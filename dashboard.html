@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Mi Portafolio</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+
+<body class="bg-light">
+
+    <!-- HEADER -->
+    <header class="navbar navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container-fluid">
+
+            <div class="d-flex align-items-center gap-2">
+                <button
+                    type="button"
+                    class="btn btn-outline-light btn-sm d-md-none"
+                    id="mobileSidebarToggle"
+                    aria-label="Abrir menú lateral"
+                    aria-expanded="false"
+                    aria-controls="sidebar"
+                >
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <a class="navbar-brand fw-bold mb-0" href="#">
+                    <i class="bi bi-grid-1x2-fill me-2"></i>
+                    Portfolio Admin
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+
+                <a
+                    href="portfolio.html"
+                    target="_blank"
+                    class="btn btn-outline-light btn-sm"
+                >
+                    <i class="bi bi-box-arrow-up-right me-1"></i>
+                    Ver portafolio
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO GENERAL -->
+    <div class="dashboard-layout">
+
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar" id="sidebar">
+
+                <div class="sidebar-header">
+                    <div class="sidebar-title">
+                        <i class="bi bi-sliders2"></i>
+                        <span class="sidebar-text">Configuración</span>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="sidebar-toggle"
+                        id="sidebarToggle"
+                        aria-label="Contraer menú lateral"
+                        aria-expanded="true"
+                    >
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                </div>
+
+                <nav class="sidebar-nav" aria-label="Navegación del dashboard">
+
+                    <a class="sidebar-link active" href="#perfil">
+                        <i class="bi bi-person"></i>
+                        <span class="sidebar-text">Perfil</span>
+                    </a>
+
+                    <a class="sidebar-link" href="#sobre-mi">
+                        <i class="bi bi-person-vcard"></i>
+                        <span class="sidebar-text">Sobre mí</span>
+                    </a>
+
+                    <a class="sidebar-link" href="#estadisticas">
+                        <i class="bi bi-bar-chart"></i>
+                        <span class="sidebar-text">Estadísticas</span>
+                    </a>
+
+                    <a class="sidebar-link" href="#servicios">
+                        <i class="bi bi-briefcase"></i>
+                        <span class="sidebar-text">Servicios</span>
+                    </a>
+
+                    <a class="sidebar-link" href="#proyectos">
+                        <i class="bi bi-folder"></i>
+                        <span class="sidebar-text">Proyectos</span>
+                    </a>
+
+                    <a class="sidebar-link" href="#habilidades">
+                        <i class="bi bi-code-slash"></i>
+                        <span class="sidebar-text">Habilidades</span>
+                    </a>
+
+                    <a class="sidebar-link" href="#proceso">
+                        <i class="bi bi-diagram-3"></i>
+                        <span class="sidebar-text">Proceso</span>
+                    </a>
+
+                    <a class="sidebar-link" href="#redes">
+                        <i class="bi bi-share"></i>
+                        <span class="sidebar-text">Redes sociales</span>
+                    </a>
+
+                    <a class="sidebar-link" href="#configuracion">
+                        <i class="bi bi-gear"></i>
+                        <span class="sidebar-text">Configuración</span>
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- MAIN -->
+            <main class="dashboard-main p-4" id="mainContent">
+
+                <div class="mb-4">
+
+                    <h1 class="h3 fw-bold">
+                        Configuración del portafolio
+                    </h1>
+
+                    <p class="text-secondary mb-0">
+                        Completa la información que se mostrará en tu
+                        portafolio personal.
+                    </p>
+
+                </div>
+
+
+                
+                <form id="portfolioForm">
+
+
+                    <!-- PERFIL -->
+                    <section id="perfil" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <h2 class="h5 mb-0">
+                                <i class="bi bi-person me-2"></i>
+                                Datos principales
+                            </h2>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="row g-3">
+
+
+                                <!-- FOTO -->
+                                <div class="col-12">
+
+                                    <label
+                                        for="fotoPerfil"
+                                        class="form-label"
+                                    >
+                                        Foto de perfil
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        class="form-control"
+                                        id="fotoPerfil"
+                                        accept="image/*"
+                                    >
+
+                                    <div class="form-text">
+                                        Selecciona una imagen para utilizarla
+                                        como fotografía principal.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- NOMBRE -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="nombre"
+                                        class="form-label"
+                                    >
+                                        Nombre
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nombre"
+                                        placeholder="Ej. Aron"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- APELLIDO -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="apellido"
+                                        class="form-label"
+                                    >
+                                        Apellido
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="apellido"
+                                        placeholder="Ej. Pendolema"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- PROFESIÓN -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="profesion"
+                                        class="form-label"
+                                    >
+                                        Profesión o especialidad
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="profesion"
+                                        placeholder="Ej. Desarrollador de Software"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- UBICACIÓN -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="ubicacion"
+                                        class="form-label"
+                                    >
+                                        Ubicación
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="ubicacion"
+                                        placeholder="Ej. Guayaquil, Ecuador"
+                                    >
+
+                                </div>
+
+
+                                <!-- FRASE -->
+                                <div class="col-12">
+
+                                    <label
+                                        for="frasePresentacion"
+                                        class="form-label"
+                                    >
+                                        Frase de presentación
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="frasePresentacion"
+                                        placeholder="Una breve frase para la presentación principal"
+                                        maxlength="150"
+                                    >
+
+                                </div>
+
+
+                                <!-- DISPONIBILIDAD -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="disponibilidad"
+                                        class="form-label"
+                                    >
+                                        Disponibilidad
+                                    </label>
+
+                                    <select
+                                        id="disponibilidad"
+                                        class="form-select"
+                                    >
+
+                                        <option value="disponible">
+                                            Disponible para proyectos
+                                        </option>
+
+                                        <option value="freelance">
+                                            Disponible para freelance
+                                        </option>
+
+                                        <option value="trabajo">
+                                            Buscando oportunidades laborales
+                                        </option>
+
+                                        <option value="no-disponible">
+                                            No disponible actualmente
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- SOBRE MÍ -->
+                    <section id="sobre-mi" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <h2 class="h5 mb-0">
+                                <i class="bi bi-person-vcard me-2"></i>
+                                Sobre mí
+                            </h2>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="row g-3">
+
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="descripcion"
+                                        class="form-label"
+                                    >
+                                        Descripción personal
+                                    </label>
+
+                                    <textarea
+                                        id="descripcion"
+                                        class="form-control"
+                                        rows="5"
+                                        placeholder="Escribe una descripción sobre ti, tus intereses y experiencia..."
+                                        required
+                                    ></textarea>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="correo"
+                                        class="form-label"
+                                    >
+                                        Correo electrónico
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="correo"
+                                        class="form-control"
+                                        placeholder="correo@ejemplo.com"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="telefono"
+                                        class="form-label"
+                                    >
+                                        Teléfono
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="telefono"
+                                        class="form-control"
+                                        placeholder="0999999999"
+                                        pattern="[0-9]+"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="idiomas"
+                                        class="form-label"
+                                    >
+                                        Idiomas
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="idiomas"
+                                        class="form-control"
+                                        placeholder="Ej. Español, Inglés"
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="cv"
+                                        class="form-label"
+                                    >
+                                        Enlace al CV
+                                    </label>
+
+                                    <input
+                                        type="url"
+                                        id="cv"
+                                        class="form-control"
+                                        placeholder="https://..."
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ESTADÍSTICAS -->
+                    <section id="estadisticas" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <h2 class="h5 mb-0">
+                                <i class="bi bi-bar-chart me-2"></i>
+                                Estadísticas
+                            </h2>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="row g-3">
+
+
+                                <div class="col-md-6 col-xl-3">
+
+                                    <label
+                                        for="aniosExperiencia"
+                                        class="form-label"
+                                    >
+                                        Años de experiencia
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="aniosExperiencia"
+                                        class="form-control"
+                                        min="0"
+                                        placeholder="0"
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6 col-xl-3">
+
+                                    <label
+                                        for="proyectosCompletados"
+                                        class="form-label"
+                                    >
+                                        Proyectos realizados
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="proyectosCompletados"
+                                        class="form-control"
+                                        min="0"
+                                        placeholder="0"
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6 col-xl-3">
+
+                                    <label
+                                        for="tecnologiasDominadas"
+                                        class="form-label"
+                                    >
+                                        Tecnologías
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="tecnologiasDominadas"
+                                        class="form-control"
+                                        min="0"
+                                        placeholder="0"
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6 col-xl-3">
+
+                                    <label
+                                        for="logros"
+                                        class="form-label"
+                                    >
+                                        Logros / certificaciones
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="logros"
+                                        class="form-control"
+                                        min="0"
+                                        placeholder="0"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- SERVICIOS -->
+                    <section id="servicios" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h2 class="h5 mb-0">
+                                    <i class="bi bi-briefcase me-2"></i>
+                                    Servicios
+                                </h2>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-primary btn-sm"
+                                    id="btnAgregarServicio"
+                                >
+                                    <i class="bi bi-plus-lg me-1"></i>
+                                    Agregar servicio
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div
+                                id="listaServicios"
+                                class="row g-3"
+                            >
+
+                                <!-- SERVICIO INICIAL -->
+                                <article class="col-lg-6">
+
+                                    <div class="border rounded p-3 h-100">
+
+                                        <div class="mb-3">
+
+                                            <label class="form-label">
+                                                Nombre del servicio
+                                            </label>
+
+                                            <input
+                                                type="text"
+                                                class="form-control servicio-titulo"
+                                                placeholder="Ej. Desarrollo Web"
+                                            >
+
+                                        </div>
+
+
+                                        <div class="mb-3">
+
+                                            <label class="form-label">
+                                                Descripción
+                                            </label>
+
+                                            <textarea
+                                                class="form-control servicio-descripcion"
+                                                rows="3"
+                                                placeholder="Describe el servicio..."
+                                            ></textarea>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <label class="form-label">
+                                                Icono
+                                            </label>
+
+                                            <select class="form-select servicio-icono">
+
+                                                <option value="bi-code-slash">
+                                                    Código
+                                                </option>
+
+                                                <option value="bi-display">
+                                                    Diseño web
+                                                </option>
+
+                                                <option value="bi-phone">
+                                                    Responsive
+                                                </option>
+
+                                                <option value="bi-database">
+                                                    Base de datos
+                                                </option>
+
+                                                <option value="bi-tools">
+                                                    Mantenimiento
+                                                </option>
+
+                                                <option value="bi-speedometer2">
+                                                    Optimización
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- PROYECTOS -->
+                    <section id="proyectos" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h2 class="h5 mb-0">
+                                    <i class="bi bi-folder me-2"></i>
+                                    Proyectos
+                                </h2>
+
+                                <button
+                                    type="button"
+                                    id="btnAgregarProyecto"
+                                    class="btn btn-outline-primary btn-sm"
+                                >
+                                    <i class="bi bi-plus-lg me-1"></i>
+                                    Agregar proyecto
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div
+                                id="listaProyectos"
+                                class="row g-3"
+                            >
+
+                                <article class="col-lg-6">
+
+                                    <div class="border rounded p-3 h-100">
+
+                                        <div class="mb-3">
+
+                                            <label class="form-label">
+                                                Nombre del proyecto
+                                            </label>
+
+                                            <input
+                                                type="text"
+                                                class="form-control proyecto-nombre"
+                                                placeholder="Nombre del proyecto"
+                                            >
+
+                                        </div>
+
+
+                                        <div class="mb-3">
+
+                                            <label class="form-label">
+                                                Descripción
+                                            </label>
+
+                                            <textarea
+                                                class="form-control proyecto-descripcion"
+                                                rows="3"
+                                                placeholder="Descripción del proyecto..."
+                                            ></textarea>
+
+                                        </div>
+
+
+                                        <div class="mb-3">
+
+                                            <label class="form-label">
+                                                Tecnologías utilizadas
+                                            </label>
+
+                                            <input
+                                                type="text"
+                                                class="form-control proyecto-tecnologias"
+                                                placeholder="Ej. HTML, CSS, JavaScript"
+                                            >
+
+                                        </div>
+
+
+                                        <div class="mb-3">
+
+                                            <label class="form-label">
+                                                Imagen del proyecto
+                                            </label>
+
+                                            <input
+                                                type="file"
+                                                class="form-control proyecto-imagen"
+                                                accept="image/*"
+                                            >
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <label class="form-label">
+                                                Enlace del proyecto
+                                            </label>
+
+                                            <input
+                                                type="url"
+                                                class="form-control proyecto-url"
+                                                placeholder="https://..."
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- HABILIDADES -->
+                    <section id="habilidades" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h2 class="h5 mb-0">
+                                    <i class="bi bi-code-slash me-2"></i>
+                                    Habilidades y herramientas
+                                </h2>
+
+                                <button
+                                    type="button"
+                                    id="btnAgregarHabilidad"
+                                    class="btn btn-outline-primary btn-sm"
+                                >
+                                    <i class="bi bi-plus-lg me-1"></i>
+                                    Agregar habilidad
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div id="listaHabilidades">
+
+                                <div class="row g-3 align-items-end mb-3 habilidad-item">
+
+                                    <div class="col-md-5">
+
+                                        <label class="form-label">
+                                            Tecnología
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control habilidad-nombre"
+                                            placeholder="Ej. JavaScript"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="col-md-4">
+
+                                        <label class="form-label">
+                                            Nivel
+                                        </label>
+
+                                        <select class="form-select habilidad-nivel">
+
+                                            <option value="basico">
+                                                Básico
+                                            </option>
+
+                                            <option value="intermedio">
+                                                Intermedio
+                                            </option>
+
+                                            <option value="avanzado">
+                                                Avanzado
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="col-md-3">
+
+                                        <label class="form-label">
+                                            Categoría
+                                        </label>
+
+                                        <select class="form-select habilidad-categoria">
+
+                                            <option value="frontend">
+                                                Front-end
+                                            </option>
+
+                                            <option value="backend">
+                                                Back-end
+                                            </option>
+
+                                            <option value="database">
+                                                Base de datos
+                                            </option>
+
+                                            <option value="herramienta">
+                                                Herramienta
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- PROCESO -->
+                    <section id="proceso" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <h2 class="h5 mb-0">
+                                <i class="bi bi-diagram-3 me-2"></i>
+                                Proceso de trabajo
+                            </h2>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="row g-3">
+
+
+                                <article class="col-md-6 col-xl">
+
+                                    <label
+                                        for="proceso1"
+                                        class="form-label"
+                                    >
+                                        01. Analizar
+                                    </label>
+
+                                    <textarea
+                                        id="proceso1"
+                                        class="form-control"
+                                        rows="3"
+                                        placeholder="Descripción..."
+                                    ></textarea>
+
+                                </article>
+
+
+                                <article class="col-md-6 col-xl">
+
+                                    <label
+                                        for="proceso2"
+                                        class="form-label"
+                                    >
+                                        02. Planificar
+                                    </label>
+
+                                    <textarea
+                                        id="proceso2"
+                                        class="form-control"
+                                        rows="3"
+                                        placeholder="Descripción..."
+                                    ></textarea>
+
+                                </article>
+
+
+                                <article class="col-md-6 col-xl">
+
+                                    <label
+                                        for="proceso3"
+                                        class="form-label"
+                                    >
+                                        03. Diseñar
+                                    </label>
+
+                                    <textarea
+                                        id="proceso3"
+                                        class="form-control"
+                                        rows="3"
+                                        placeholder="Descripción..."
+                                    ></textarea>
+
+                                </article>
+
+
+                                <article class="col-md-6 col-xl">
+
+                                    <label
+                                        for="proceso4"
+                                        class="form-label"
+                                    >
+                                        04. Desarrollar
+                                    </label>
+
+                                    <textarea
+                                        id="proceso4"
+                                        class="form-control"
+                                        rows="3"
+                                        placeholder="Descripción..."
+                                    ></textarea>
+
+                                </article>
+
+
+                                <article class="col-md-6 col-xl">
+
+                                    <label
+                                        for="proceso5"
+                                        class="form-label"
+                                    >
+                                        05. Entregar
+                                    </label>
+
+                                    <textarea
+                                        id="proceso5"
+                                        class="form-control"
+                                        rows="3"
+                                        placeholder="Descripción..."
+                                    ></textarea>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- REDES SOCIALES -->
+                    <section id="redes" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <h2 class="h5 mb-0">
+                                <i class="bi bi-share me-2"></i>
+                                Redes sociales
+                            </h2>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="row g-3">
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="github"
+                                        class="form-label"
+                                    >
+                                        <i class="bi bi-github me-1"></i>
+                                        GitHub
+                                    </label>
+
+                                    <input
+                                        type="url"
+                                        id="github"
+                                        class="form-control"
+                                        placeholder="https://github.com/..."
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="linkedin"
+                                        class="form-label"
+                                    >
+                                        <i class="bi bi-linkedin me-1"></i>
+                                        LinkedIn
+                                    </label>
+
+                                    <input
+                                        type="url"
+                                        id="linkedin"
+                                        class="form-control"
+                                        placeholder="https://linkedin.com/in/..."
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="instagram"
+                                        class="form-label"
+                                    >
+                                        <i class="bi bi-instagram me-1"></i>
+                                        Instagram
+                                    </label>
+
+                                    <input
+                                        type="url"
+                                        id="instagram"
+                                        class="form-control"
+                                        placeholder="https://instagram.com/..."
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="webPersonal"
+                                        class="form-label"
+                                    >
+                                        <i class="bi bi-globe me-1"></i>
+                                        Sitio web
+                                    </label>
+
+                                    <input
+                                        type="url"
+                                        id="webPersonal"
+                                        class="form-control"
+                                        placeholder="https://..."
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- CONFIGURACIÓN -->
+                    <section id="configuracion" class="card shadow-sm border-0 mb-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <h2 class="h5 mb-0">
+                                <i class="bi bi-gear me-2"></i>
+                                Configuración
+                            </h2>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="row g-3">
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="temaInicial"
+                                        class="form-label"
+                                    >
+                                        Tema inicial
+                                    </label>
+
+                                    <select
+                                        id="temaInicial"
+                                        class="form-select"
+                                    >
+
+                                        <option value="light">
+                                            Modo claro
+                                        </option>
+
+                                        <option value="dark">
+                                            Modo oscuro
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="colorPrincipal"
+                                        class="form-label"
+                                    >
+                                        Color principal
+                                    </label>
+
+                                    <input
+                                        type="color"
+                                        id="colorPrincipal"
+                                        class="form-control form-control-color"
+                                        value="#4169e1"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ACCIONES -->
+                    <section class="card shadow-sm border-0">
+
+                        <div class="card-body">
+
+                            <div
+                                class="d-flex flex-column flex-md-row justify-content-between gap-3"
+                            >
+
+                                <div>
+
+                                    <button
+                                        type="button"
+                                        id="btnLimpiar"
+                                        class="btn btn-outline-danger"
+                                    >
+                                        <i class="bi bi-trash me-1"></i>
+                                        Limpiar información
+                                    </button>
+
+                                </div>
+
+
+                                <div class="d-flex gap-2">
+
+                                    <a
+                                        href="portfolio.html"
+                                        target="_blank"
+                                        class="btn btn-outline-secondary"
+                                    >
+                                        <i class="bi bi-eye me-1"></i>
+                                        Vista previa
+                                    </a>
+
+
+                                    <button
+                                        type="submit"
+                                        id="btnGuardar"
+                                        class="btn btn-primary"
+                                    >
+                                        <i class="bi bi-floppy me-1"></i>
+                                        Guardar cambios
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                </form>
+
+            </main>
+
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light text-center py-3">
+
+        <small>
+            Panel de administración del portafolio
+        </small>
+
+    </footer>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portafolio profesional de desarrollo de software"
+    >
+
+    <title>Mi Portafolio</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- CSS propio -->
+    <link
+        rel="stylesheet"
+        href="css/portfolio.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- HEADER / NAVEGACIÓN-->
+    <header
+        id="inicio"
+        class="portfolio-header sticky-top"
+    >
+
+        <nav
+            class="navbar navbar-expand-lg"
+            aria-label="Navegación principal"
+        >
+
+            <div class="container-fluid portfolio-nav-container">
+
+
+                <!-- NOMBRE / LOGO -->
+                <a
+                    class="navbar-brand fw-bold"
+                    href="#inicio"
+                    id="navbarNombre"
+                >
+                    Portfolio
+                </a>
+
+
+                <!-- BOTÓN MENÚ MÓVIL -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarPortfolio"
+                    aria-controls="navbarPortfolio"
+                    aria-expanded="false"
+                    aria-label="Abrir navegación"
+                >
+                    <i class="bi bi-list"></i>
+                </button>
+
+
+                <!-- MENÚ -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarPortfolio"
+                >
+
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center gap-lg-2"
+                    >
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#inicio"
+                            >
+                                Inicio
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#sobre-mi"
+                            >
+                                Sobre mí
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#servicios"
+                            >
+                                Servicios
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#proyectos"
+                            >
+                                Proyectos
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#habilidades"
+                            >
+                                Habilidades
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#contacto"
+                            >
+                                Contacto
+                            </a>
+                        </li>
+
+
+                        <!-- CAMBIO DE TEMA -->
+                        <li class="nav-item ms-lg-2">
+
+                            <button
+                                type="button"
+                                class="btn btn-theme"
+                                id="btnTema"
+                                aria-label="Cambiar tema"
+                                title="Cambiar tema"
+                            >
+
+                                <i
+                                    class="bi bi-moon"
+                                    id="iconoTema"
+                                ></i>
+
+                            </button>
+
+                        </li>
+
+
+                        <!-- CONTACTO -->
+                        <li class="nav-item ms-lg-2">
+
+                            <a
+                                class="btn btn-primary btn-contacto-nav"
+                                href="#contacto"
+                            >
+                                Contáctame
+                                <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN-->
+    <main>
+
+
+        <!-- HERO= -->
+        <section
+            class="hero-section"
+            aria-labelledby="heroNombre"
+        >
+
+            <div class="container">
+
+                <div
+                    class="row align-items-center min-vh-75 g-5"
+                >
+
+
+                    <!-- INFORMACIÓN -->
+                    <div
+                        class="col-lg-6 order-2 order-lg-1"
+                    >
+
+                        <p class="hero-intro mb-2">
+                            Hola, soy
+                        </p>
+
+
+                        <h1
+                            class="hero-title"
+                            id="heroNombre"
+                        >
+                            Cargando...
+                        </h1>
+
+
+                        <h2
+                            class="hero-profesion"
+                            id="heroProfesion"
+                        >
+                        </h2>
+
+
+                        <p
+                            class="hero-descripcion mt-4"
+                            id="heroFrase"
+                        >
+                        </p>
+
+
+                        <!-- UBICACIÓN Y DISPONIBILIDAD -->
+                        <div
+                            class="hero-meta d-flex flex-wrap gap-3 mt-4"
+                        >
+
+                            <span id="heroUbicacionWrapper">
+
+                                <i
+                                    class="bi bi-geo-alt me-1"
+                                ></i>
+
+                                <span id="heroUbicacion"></span>
+
+                            </span>
+
+
+                            <span id="heroDisponibilidadWrapper">
+
+                                <i
+                                    class="bi bi-briefcase me-1"
+                                ></i>
+
+                                <span id="heroDisponibilidad"></span>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- BOTONES -->
+                        <div
+                            class="hero-actions d-flex flex-wrap gap-3 mt-4"
+                        >
+
+                            <a
+                                href="#proyectos"
+                                class="btn btn-primary"
+                            >
+                                Ver proyectos
+
+                                <i
+                                    class="bi bi-arrow-right ms-1"
+                                ></i>
+                            </a>
+
+
+                            <a
+                                href="#contacto"
+                                class="btn btn-outline-primary"
+                            >
+                                <i
+                                    class="bi bi-envelope me-1"
+                                ></i>
+
+                                Contáctame
+                            </a>
+
+
+                            <a
+                                href="#"
+                                class="btn btn-outline-secondary"
+                                id="btnDescargarCv"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i
+                                    class="bi bi-download me-1"
+                                ></i>
+
+                                Ver CV
+                            </a>
+
+                        </div>
+
+
+                        <!-- REDES HERO -->
+                        <div
+                            class="hero-socials d-flex gap-3 mt-4"
+                            id="heroRedes"
+                        >
+
+                            <a
+                                href="#"
+                                id="heroGithub"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                            >
+                                <i class="bi bi-github"></i>
+                            </a>
+
+
+                            <a
+                                href="#"
+                                id="heroLinkedin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                            >
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+
+                            <a
+                                href="#"
+                                id="heroInstagram"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                            >
+                                <i class="bi bi-instagram"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO -->
+                    <div
+                        class="col-lg-6 order-1 order-lg-2 text-center"
+                    >
+
+                        <div class="hero-image-wrapper">
+
+                            <img
+                                src=""
+                                alt="Foto de perfil"
+                                id="heroFoto"
+                                class="hero-image img-fluid"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ESTADÍSTICAS -->
+        <section
+            class="stats-section"
+            aria-label="Estadísticas profesionales"
+        >
+
+            <div class="container">
+
+                <div
+                    class="stats-container row g-0"
+                >
+
+
+                    <!-- AÑOS -->
+                    <article
+                        class="col-6 col-lg-3 stat-item"
+                    >
+
+                        <div class="stat-icon">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+
+                        <h3 id="statExperiencia">
+                            0
+                        </h3>
+
+                        <p>
+                            Años de experiencia
+                        </p>
+
+                    </article>
+
+
+                    <!-- PROYECTOS -->
+                    <article
+                        class="col-6 col-lg-3 stat-item"
+                    >
+
+                        <div class="stat-icon">
+                            <i class="bi bi-folder-check"></i>
+                        </div>
+
+                        <h3 id="statProyectos">
+                            0
+                        </h3>
+
+                        <p>
+                            Proyectos realizados
+                        </p>
+
+                    </article>
+
+
+                    <!-- TECNOLOGÍAS -->
+                    <article
+                        class="col-6 col-lg-3 stat-item"
+                    >
+
+                        <div class="stat-icon">
+                            <i class="bi bi-code-square"></i>
+                        </div>
+
+                        <h3 id="statTecnologias">
+                            0
+                        </h3>
+
+                        <p>
+                            Tecnologías
+                        </p>
+
+                    </article>
+
+
+                    <!-- LOGROS -->
+                    <article
+                        class="col-6 col-lg-3 stat-item"
+                    >
+
+                        <div class="stat-icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+
+                        <h3 id="statLogros">
+                            0
+                        </h3>
+
+                        <p>
+                            Logros y certificaciones
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SOBRE MÍ -->
+        <section
+            id="sobre-mi"
+            class="section-padding about-section"
+        >
+
+            <div class="container">
+
+
+                <!-- TÍTULO -->
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        Sobre mí
+                    </span>
+
+                    <h2>
+                        Conoce un poco más sobre mí
+                    </h2>
+
+                </div>
+
+
+                <div class="row g-4 align-items-stretch">
+
+
+                    <!-- DESCRIPCIÓN -->
+                    <article class="col-lg-7">
+
+                        <div class="about-card h-100">
+
+                            <h3>
+                                Construyendo soluciones con tecnología
+                            </h3>
+
+                            <p
+                                id="sobreMiDescripcion"
+                            >
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ASIDE DATOS -->
+                    <aside class="col-lg-5">
+
+                        <div
+                            class="contact-info-card h-100"
+                        >
+
+
+                            <!-- UBICACIÓN -->
+                            <div class="info-item">
+
+                                <i class="bi bi-geo-alt"></i>
+
+                                <div>
+                                    <span>Ubicación</span>
+
+                                    <strong
+                                        id="sobreMiUbicacion"
+                                    ></strong>
+                                </div>
+
+                            </div>
+
+
+                            <!-- CORREO -->
+                            <div class="info-item">
+
+                                <i class="bi bi-envelope"></i>
+
+                                <div>
+                                    <span>Correo</span>
+
+                                    <strong
+                                        id="sobreMiCorreo"
+                                    ></strong>
+                                </div>
+
+                            </div>
+
+
+                            <!-- TELÉFONO -->
+                            <div class="info-item">
+
+                                <i class="bi bi-telephone"></i>
+
+                                <div>
+                                    <span>Teléfono</span>
+
+                                    <strong
+                                        id="sobreMiTelefono"
+                                    ></strong>
+                                </div>
+
+                            </div>
+
+
+                            <!-- IDIOMAS -->
+                            <div class="info-item">
+
+                                <i class="bi bi-translate"></i>
+
+                                <div>
+                                    <span>Idiomas</span>
+
+                                    <strong
+                                        id="sobreMiIdiomas"
+                                    ></strong>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </aside>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SERVICIOS -->
+        <section
+            id="servicios"
+            class="section-padding services-section"
+        >
+
+            <div class="container">
+
+
+                <div
+                    class="section-heading text-center"
+                >
+
+                    <span class="section-label">
+                        Servicios
+                    </span>
+
+                    <h2>
+                        Lo que puedo hacer
+                    </h2>
+
+                    <p>
+                        Soluciones enfocadas en tecnología,
+                        desarrollo y experiencia digital.
+                    </p>
+
+                </div>
+
+
+                <!-- JS INSERTARÁ LOS SERVICIOS AQUÍ -->
+                <div
+                    class="row g-4"
+                    id="serviciosContainer"
+                >
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROYECTOS -->
+        <section
+            id="proyectos"
+            class="section-padding projects-section"
+        >
+
+            <div class="container">
+
+
+                <div
+                    class="section-heading d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3"
+                >
+
+                    <div>
+
+                        <span class="section-label">
+                            Proyectos
+                        </span>
+
+                        <h2>
+                            Proyectos destacados
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JS INSERTARÁ LOS PROYECTOS -->
+                <div
+                    class="row g-4"
+                    id="proyectosContainer"
+                >
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- HABILIDADES -->
+        <section
+            id="habilidades"
+            class="section-padding skills-section"
+        >
+
+            <div class="container">
+
+
+                <div
+                    class="section-heading text-center"
+                >
+
+                    <span class="section-label">
+                        Habilidades
+                    </span>
+
+                    <h2>
+                        Tecnologías y herramientas
+                    </h2>
+
+                </div>
+
+
+                <!-- FILTROS -->
+                <div
+                    class="skills-filters d-flex flex-wrap justify-content-center gap-2 mb-4"
+                >
+
+                    <button
+                        type="button"
+                        class="btn btn-skill-filter active"
+                        data-filter="todos"
+                    >
+                        Todos
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-skill-filter"
+                        data-filter="frontend"
+                    >
+                        Front-end
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-skill-filter"
+                        data-filter="backend"
+                    >
+                        Back-end
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-skill-filter"
+                        data-filter="database"
+                    >
+                        Base de datos
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-skill-filter"
+                        data-filter="herramienta"
+                    >
+                        Herramientas
+                    </button>
+
+                </div>
+
+
+                <!-- JS INSERTARÁ HABILIDADES -->
+                <div
+                    class="row g-3"
+                    id="habilidadesContainer"
+                >
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROCESO -->
+        <section
+            id="proceso"
+            class="section-padding process-section"
+        >
+
+            <div class="container">
+
+
+                <div
+                    class="section-heading text-center"
+                >
+
+                    <span class="section-label">
+                        Mi proceso
+                    </span>
+
+                    <h2>
+                        Cómo desarrollo cada proyecto
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="row g-4"
+                    id="procesoContainer"
+                >
+
+
+                    <!-- ANALIZAR -->
+                    <article
+                        class="col-md-6 col-xl process-step"
+                    >
+
+                        <span class="process-number">
+                            01
+                        </span>
+
+                        <i class="bi bi-search"></i>
+
+                        <h3>
+                            Analizar
+                        </h3>
+
+                        <p id="procesoAnalizar"></p>
+
+                    </article>
+
+
+                    <!-- PLANIFICAR -->
+                    <article
+                        class="col-md-6 col-xl process-step"
+                    >
+
+                        <span class="process-number">
+                            02
+                        </span>
+
+                        <i class="bi bi-calendar-check"></i>
+
+                        <h3>
+                            Planificar
+                        </h3>
+
+                        <p id="procesoPlanificar"></p>
+
+                    </article>
+
+
+                    <!-- DISEÑAR -->
+                    <article
+                        class="col-md-6 col-xl process-step"
+                    >
+
+                        <span class="process-number">
+                            03
+                        </span>
+
+                        <i class="bi bi-pencil-square"></i>
+
+                        <h3>
+                            Diseñar
+                        </h3>
+
+                        <p id="procesoDisenar"></p>
+
+                    </article>
+
+
+                    <!-- DESARROLLAR -->
+                    <article
+                        class="col-md-6 col-xl process-step"
+                    >
+
+                        <span class="process-number">
+                            04
+                        </span>
+
+                        <i class="bi bi-code-slash"></i>
+
+                        <h3>
+                            Desarrollar
+                        </h3>
+
+                        <p id="procesoDesarrollar"></p>
+
+                    </article>
+
+
+                    <!-- ENTREGAR -->
+                    <article
+                        class="col-md-6 col-xl process-step"
+                    >
+
+                        <span class="process-number">
+                            05
+                        </span>
+
+                        <i class="bi bi-send"></i>
+
+                        <h3>
+                            Entregar
+                        </h3>
+
+                        <p id="procesoEntregar"></p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CONTACTO -->
+        <section
+            id="contacto"
+            class="section-padding contact-section"
+        >
+
+            <div class="container">
+
+                <div class="row g-5">
+
+
+                    <!-- TEXTO -->
+                    <div class="col-lg-5">
+
+                        <div class="contact-intro">
+
+                            <span class="section-label">
+                                Contacto
+                            </span>
+
+                            <h2>
+                                ¿Tienes un proyecto en mente?
+                            </h2>
+
+                            <p>
+                                Puedes enviarme un mensaje mediante
+                                el formulario y contarme sobre tu
+                                proyecto o consulta.
+                            </p>
+
+
+                            <div
+                                class="contact-direct mt-4"
+                            >
+
+                                <a
+                                    href="#"
+                                    id="contactoEmailLink"
+                                >
+                                    <i
+                                        class="bi bi-envelope"
+                                    ></i>
+
+                                    <span
+                                        id="contactoEmail"
+                                    ></span>
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    id="contactoTelefonoLink"
+                                >
+                                    <i
+                                        class="bi bi-telephone"
+                                    ></i>
+
+                                    <span
+                                        id="contactoTelefono"
+                                    ></span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FORMULARIO -->
+                    <div class="col-lg-7">
+
+                        <form
+                            id="formContacto"
+                            class="contact-form"
+                            novalidate
+                        >
+
+                            <div class="row g-3">
+
+
+                                <!-- TEXT -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="contactoNombre"
+                                        class="form-label"
+                                    >
+                                        Nombre
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="contactoNombre"
+                                        placeholder="Tu nombre"
+                                        required
+                                    >
+
+                                    <div class="invalid-feedback">
+                                        Ingresa tu nombre.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- EMAIL -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="contactoCorreo"
+                                        class="form-label"
+                                    >
+                                        Correo electrónico
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="contactoCorreo"
+                                        placeholder="correo@ejemplo.com"
+                                        required
+                                    >
+
+                                    <div class="invalid-feedback">
+                                        Ingresa un correo electrónico válido.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TEL -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="contactoTelefonoInput"
+                                        class="form-label"
+                                    >
+                                        Teléfono
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="contactoTelefonoInput"
+                                        placeholder="0999999999"
+                                        required
+                                    >
+
+                                    <div
+                                        class="invalid-feedback"
+                                        id="telefonoFeedback"
+                                    >
+                                        El teléfono debe contener solo números.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- SELECT -->
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="contactoTipo"
+                                        class="form-label"
+                                    >
+                                        Tipo de consulta
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="contactoTipo"
+                                        required
+                                    >
+
+                                        <option
+                                            value=""
+                                            selected
+                                            disabled
+                                        >
+                                            Selecciona una opción
+                                        </option>
+
+                                        <option value="desarrollo-web">
+                                            Desarrollo web
+                                        </option>
+
+                                        <option value="aplicacion">
+                                            Aplicación
+                                        </option>
+
+                                        <option value="base-datos">
+                                            Base de datos
+                                        </option>
+
+                                        <option value="mantenimiento">
+                                            Mantenimiento
+                                        </option>
+
+                                        <option value="otro">
+                                            Otro
+                                        </option>
+
+                                    </select>
+
+                                    <div class="invalid-feedback">
+                                        Selecciona un tipo de consulta.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TEXTAREA -->
+                                <div class="col-12">
+
+                                    <label
+                                        for="contactoMensaje"
+                                        class="form-label"
+                                    >
+                                        Mensaje
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="contactoMensaje"
+                                        rows="5"
+                                        placeholder="Cuéntame sobre tu proyecto..."
+                                        required
+                                    ></textarea>
+
+                                    <div class="invalid-feedback">
+                                        Escribe un mensaje.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- BOTÓN -->
+                                <div class="col-12">
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary w-100"
+                                    >
+
+                                        Enviar mensaje
+
+                                        <i
+                                            class="bi bi-send ms-1"
+                                        ></i>
+
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+
+                        </form>
+
+
+                        <!-- RESPUESTA DEL FORMULARIO -->
+                        <div
+                            id="mensajeContacto"
+                            class="mt-3"
+                        ></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="portfolio-footer">
+
+        <div class="container">
+
+            <div
+                class="row align-items-center g-3"
+            >
+
+
+                <!-- NOMBRE -->
+                <div class="col-md-4">
+
+                    <strong
+                        id="footerNombre"
+                    >
+                        Portfolio
+                    </strong>
+
+                    <p
+                        class="mb-0"
+                        id="footerProfesion"
+                    >
+                    </p>
+
+                </div>
+
+
+                <!-- REDES -->
+                <div
+                    class="col-md-4 text-md-center"
+                >
+
+                    <div
+                        class="footer-socials d-flex justify-content-md-center gap-3"
+                        id="footerRedes"
+                    >
+
+                        <a
+                            href="#"
+                            id="footerGithub"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <i class="bi bi-github"></i>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            id="footerLinkedin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            id="footerInstagram"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                        >
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            id="footerWeb"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Sitio web"
+                        >
+                            <i class="bi bi-globe"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COPYRIGHT -->
+                <div
+                    class="col-md-4 text-md-end"
+                >
+
+                    <small>
+                        ©
+                        <span id="footerYear"></span>
+
+                        <span id="footerCopyrightNombre">
+                        </span>.
+
+                        Todos los derechos reservados.
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+
+    <!-- JS PROPIO -->
+    <script src="js/portfolio.js"></script>
+
+
+</body>
+
+</html>
