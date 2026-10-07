@@ -1,12 +1,20 @@
+import Navbar from "../../components/portfolio/Navbar.jsx";
+
 function PortfolioPage() {
     return (
-        <main>
-            <h1>Portfolio</h1>
+        <>
+            <Navbar />
 
-            <p>
-                Aquí se mostrará el portafolio generado.
-            </p>
-        </main>
+            <main>
+                <div className="container py-5">
+                    <h1>Migración del portafolio</h1>
+
+                    <p>
+                        Navbar migrado correctamente a React.
+                    </p>
+                </div>
+            </main>
+        </>
     );
 }
 
