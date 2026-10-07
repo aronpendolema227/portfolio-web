@@ -1,0 +1,31 @@
+{
+  "name": "portfolio-web",
+  "version": "1.0.0",
+  "description": "Aplicación web para la creación y configuración de un portafolio personal\r mediante un panel de administración.",
+  
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aronpendolema227/portfolio-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/aronpendolema227/portfolio-web/issues"
+  },
+  "homepage": "https://github.com/aronpendolema227/portfolio-web#readme",
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.3"
+  }
+}
