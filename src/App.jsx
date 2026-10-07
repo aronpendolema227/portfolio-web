@@ -1,12 +1,21 @@
+import { Route, Routes } from "react-router-dom";
+
+import PortfolioPage from "./pages/Portfolio/PortfolioPage.jsx";
+import DashboardPage from "./pages/Dashboard/DashboardPage.jsx";
+
 function App() {
     return (
-        <main>
-            <h1>Portfolio Web Generator</h1>
+        <Routes>
+            <Route
+                path="/"
+                element={<PortfolioPage />}
+            />
 
-            <p>
-                Migración a React iniciada correctamente.
-            </p>
-        </main>
+            <Route
+                path="/dashboard"
+                element={<DashboardPage />}
+            />
+        </Routes>
     );
 }
 
