@@ -1,4 +1,5 @@
 import Navbar from "../../components/portfolio/Navbar.jsx";
+import Hero from "../../components/portfolio/Hero.jsx";
 
 function PortfolioPage() {
     return (
@@ -6,13 +7,7 @@ function PortfolioPage() {
             <Navbar />
 
             <main>
-                <div className="container py-5">
-                    <h1>Migración del portafolio</h1>
-
-                    <p>
-                        Navbar migrado correctamente a React.
-                    </p>
-                </div>
+                <Hero />
             </main>
         </>
     );
