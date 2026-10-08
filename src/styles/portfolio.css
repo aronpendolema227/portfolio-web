@@ -1046,6 +1046,11 @@ section {
         transform 0.5s ease;
 }
 
+.project-image-placeholder {
+    color: var(--text-secondary);
+    background: var(--bg-soft);
+}
+
 .project-card:hover .project-image {
     transform:
         scale(1.04);

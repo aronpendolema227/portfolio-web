@@ -12,6 +12,7 @@ function Hero({
 }) {
     return (
         <section
+            id="inicio"
             className="hero-section"
             aria-labelledby="heroNombre"
         >

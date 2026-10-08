@@ -1,28 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-function Navbar() {
+function Navbar({
+    nombre = "Portfolio",
+    tema = "light",
+    onCambiarTema
+}) {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [theme, setTheme] = useState("light");
-
-    useEffect(() => {
-        document.body.dataset.theme = theme;
-    }, [theme]);
-
-    const toggleTheme = () => {
-        setTheme((currentTheme) =>
-            currentTheme === "light" ? "dark" : "light"
-        );
-    };
+    
 
     const closeMenu = () => {
         setMenuOpen(false);
     };
 
     return (
-        <header
-            id="inicio"
-            className="portfolio-header sticky-top"
-        >
+        <header className="portfolio-header sticky-top">
             <nav
                 className="navbar navbar-expand-lg"
                 aria-label="Navegación principal"
@@ -35,7 +26,7 @@ function Navbar() {
                         href="#inicio"
                         onClick={closeMenu}
                     >
-                        Portfolio
+                        {nombre}
                     </a>
 
                     {/* BOTÓN MENÚ MÓVIL */}
@@ -126,11 +117,11 @@ function Navbar() {
                                     className="btn btn-theme"
                                     aria-label="Cambiar tema"
                                     title="Cambiar tema"
-                                    onClick={toggleTheme}
+                                    onClick={onCambiarTema}
                                 >
                                     <i
                                         className={
-                                            theme === "dark"
+                                            tema === "dark"
                                                 ? "bi bi-sun"
                                                 : "bi bi-moon"
                                         }

@@ -7,11 +7,14 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./styles/portfolio.css";
 
 import App from "./App.jsx";
+import { PortfolioProvider } from "./context/PortfolioContext.jsx";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <BrowserRouter>
-            <App />
+            <PortfolioProvider>
+                <App />
+            </PortfolioProvider>
         </BrowserRouter>
     </StrictMode>
 );
