@@ -115,9 +115,9 @@ function DashboardPage() {
                 portfolioData.estadisticas?.logros ?? ""
         });
 
-    /* =========================================================
+    /* 
     DATOS - SERVICIOS
-    ========================================================= */
+    */
 
     const crearServicioVacio = () => ({
         id: crypto.randomUUID(),
@@ -153,9 +153,9 @@ function DashboardPage() {
             ];
         });
 
-    /* =========================================================
+    /* 
     DATOS - PROYECTOS
-    ========================================================= */
+    */
 
     const crearProyectoVacio = () => ({
         id: crypto.randomUUID(),
@@ -201,9 +201,9 @@ function DashboardPage() {
             ];
         });
 
-    /* =========================================================
+    /* 
     DATOS - HABILIDADES
-    ========================================================= */
+    */
 
     const crearHabilidadVacia = () => ({
         id: crypto.randomUUID(),
@@ -243,9 +243,9 @@ function DashboardPage() {
             ];
         });
 
-    /* =========================================================
+    /* 
     DATOS - PROCESO
-    ========================================================= */
+    */
 
     const [proceso, setProceso] =
         useState({
@@ -265,9 +265,9 @@ function DashboardPage() {
                 portfolioData.proceso?.entregar || ""
         });
 
-    /* =========================================================
+    /* 
     DATOS - REDES SOCIALES
-    ========================================================= */
+    */
 
     const [redes, setRedes] =
         useState({
@@ -284,9 +284,9 @@ function DashboardPage() {
                 portfolioData.redes?.webPersonal || ""
         });
 
-    /* =========================================================
+    /* 
     DATOS - CONFIGURACIÓN
-    ========================================================= */
+    */
 
     const [configuracion, setConfiguracion] =
         useState({
@@ -423,9 +423,9 @@ function DashboardPage() {
         }));
     };
 
-    /* =========================================================
+    /* 
     MANEJADORES - SERVICIOS
-    ========================================================= */
+    */
 
     const manejarServicio = (
         servicioId,
@@ -475,9 +475,9 @@ function DashboardPage() {
         });
     };
 
-    /* =========================================================
+    /* 
     MANEJADORES - PROYECTOS
-    ========================================================= */
+    */
 
     const manejarProyecto = (
         proyectoId,
@@ -566,9 +566,9 @@ function DashboardPage() {
         });
     };
 
-    /* =========================================================
+    /* 
     MANEJADORES - HABILIDADES
-    ========================================================= */
+    */
 
     const manejarHabilidad = (
         habilidadId,
@@ -620,9 +620,9 @@ function DashboardPage() {
         });
     };
 
-    /* =========================================================
+    /* 
     MANEJADORES - PROCESO
-    ========================================================= */
+    */
 
     const manejarProceso = (event) => {
 
@@ -635,9 +635,9 @@ function DashboardPage() {
         }));
     };
 
-    /* =========================================================
+    /* 
     MANEJADORES - REDES SOCIALES
-    ========================================================= */
+    */
 
     const manejarRedes = (event) => {
 
@@ -650,9 +650,9 @@ function DashboardPage() {
         }));
     };
 
-    /* =========================================================
+    /* 
     MANEJADORES - CONFIGURACIÓN
-    ========================================================= */
+    */
 
     const manejarConfiguracion = (event) => {
 
@@ -665,9 +665,9 @@ function DashboardPage() {
         }));
     };
 
-    /* =========================================================
+    /* 
     ACCIONES GENERALES
-    ========================================================= */
+    */
 
     const manejarLimpiar = () => {
 
