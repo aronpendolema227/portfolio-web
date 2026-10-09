@@ -100,15 +100,7 @@ function Navbar({
                                 </a>
                             </li>
 
-                            <li className="nav-item">
-                                <a
-                                    className="nav-link"
-                                    href="#contacto"
-                                    onClick={closeMenu}
-                                >
-                                    Contacto
-                                </a>
-                            </li>
+                            
 
                             {/* CAMBIO DE TEMA */}
                             <li className="nav-item ms-lg-2">
